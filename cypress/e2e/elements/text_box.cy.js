@@ -1,5 +1,3 @@
-/// <reference types="cypress" />
-
 describe("Input Test Box Automation", ()=>{
     // it('navigates', () => {
     //     cy.visit('https://demoqa.com')
