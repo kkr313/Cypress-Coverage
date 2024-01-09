@@ -94,3 +94,63 @@
         ```bash
         cy.get("button").should("be.disabled");
         ```
+    ### k. Empty Assertions:
+    - Description: **Verifies that an element is empty.**
+    - Example:
+        ```bash
+        cy.get(".empty-container").should("be.empty");
+        ```
+    ### l. Focused Assertions:
+    - Description: **Checks if an element has focus.**
+    - Example:
+        ```bash
+        cy.get("#inputField").should("be.focused");
+        ```
+    ### m. Selection State Assertions:
+    - Description: **Checks if a checkbox or radio button is selected.**
+    - Example:
+        ```bash
+        cy.get("input[type='checkbox']").should("be.checked");
+        ```
+    ### n. Within Viewport Assertions:
+    - Description: **Verifies if an element is within the viewport.**
+    - Example:
+        ```bash
+        cy.get(".scrollable-element").should("be.inViewport");
+        ```
+    ### o. Match Assertions:
+    - Description: **Compares the text content against a regular expression.**
+        - Example:
+        ```bash
+        cy.get(".password").should("match", /^.{8,}$/); // Checks if the password has at least 8 characters
+        ```
+    ### p. CSS Property Assertions:
+    - Description: **Checks the value of a CSS property for an element.**
+    - Example:
+        ```bash
+        cy.get(".styled-element").should("have.css", "color", "rgb(255, 0, 0)");
+        ```
+    ### q. Value Within Range Assertions:
+    - Description:** Verifies if a numerical value is within a specified range.**
+    - Example:
+        ```bash
+        cy.get("#quantity").should("be.within", 1, 10); // Checks if the quantity is between 1 and 10
+        ```
+    ### r. Contain Elements Assertions:
+    - Description: **Checks if a selection contains a specific number of elements.**
+    - Example:
+        ```bash
+        cy.get(".parent-container").should("contain", ".child-element");
+        ```
+    ### s. Match Elements Assertions:
+    - Description: **Verifies if the selection matches a specific set of elements.**
+    - Example:
+        ```bash
+        cy.get("ul li").should("have.length", 3).and("have.text", ["Item 1", "Item 2", "Item 3"]);
+        ```
+    ### t. Chaining Assertions:
+    - Description: Chains multiple assertions together.
+    - Example:
+        ```bash
+        cy.get("#username").should("have.value", "john_doe").and("be.visible");
+        ```
